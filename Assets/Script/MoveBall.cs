@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveBall : MonoBehaviour
@@ -13,6 +11,22 @@ public class MoveBall : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        BallMovingX();
+    }
+
+    public void BallMovingX()
+    {
+        Vector3 vec = new Vector3(Input.GetAxisRaw("Horizontal"), 0, 0);
+        Vector3 nextpos = vec * 10 * Time.deltaTime;
+        transform.position += nextpos;
+
+        if(Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            Debug.Log("오른쪽으로 이동중");
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            Debug.Log("왼쪽으로 이동중");
+        }
     }
 }
