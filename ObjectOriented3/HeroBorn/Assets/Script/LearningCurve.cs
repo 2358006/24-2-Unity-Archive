@@ -1,4 +1,4 @@
-using UnityEngine;
+    using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
@@ -9,8 +9,8 @@ public class LearningCurve : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        Debug.Log(30 + 1);
-        Debug.Log(currentAge + 1);
+        // Debug.Log(30 + 1);
+        // Debug.Log(currentAge + 1);
 
         ComputerAge();
     }
@@ -18,11 +18,14 @@ public class LearningCurve : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 
+/// <summary>
+    /// 주석 추가 : CurrentAge와 AddedAge의 합을 출력한다.
+    /// </summary>
     public void ComputerAge()
     {
-       Debug.Log(currentAge + addAge);
+    Debug.Log(currentAge + addAge);
     }
 }
