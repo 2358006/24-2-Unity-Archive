@@ -15,7 +15,7 @@ public class LearningCurve : MonoBehaviour
         Debug.Log(30 + 1);
         Debug.Log(currentAge + 1);
 
-        // ComputerAge();
+        ComputerAge();
     }
 
     // Update is called once per frame
@@ -24,10 +24,10 @@ public class LearningCurve : MonoBehaviour
         
     }
 
-    /*
+    
     public void ComputerAge()
     {
        Debug.Log(currentAge + addAge);
     }
-    */
+    
 }
