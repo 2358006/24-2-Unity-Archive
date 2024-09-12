@@ -1,11 +1,11 @@
-    using UnityEngine;
+using UnityEngine;
 
 public class LearningCurve : MonoBehaviour
 {
     public int currentAge = 30;
     public int addAge = 1;
 
-    public float pi = 3.14f
+    public float pi = 3.14f;
     public string firstName = "Harrison";
     public bool isAuthor = true;
 
@@ -13,9 +13,8 @@ public class LearningCurve : MonoBehaviour
     void Start()
     {
         ComputerAge();
-        Debug.Log($"A string can have variables like {firstName} inserted directly");
-        Debug.LogFormat("A string can have variables like {0} inserted directly", fileName);
-
+        Debug.Log($"A string can have variables like {firstName} inserted directly");   
+        Debug.LogFormat("A string can have variables like {0} inserted directly", firstName);
     }
 
     /// <summary>
