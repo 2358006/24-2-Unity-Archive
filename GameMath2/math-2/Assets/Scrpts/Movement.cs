@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class Movement : MonoBehaviour
 {
-    private void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
-        Vector2 vector2 = new Vector2(); 
+        
+    }
 
-        vector2.x = 1;
-        vector2.y = 1;
+    // Update is called once per frame
+    void Update()
+    {
+        
     }
 }
