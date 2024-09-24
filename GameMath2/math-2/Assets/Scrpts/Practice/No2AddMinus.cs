@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class No2AddMinus : MonoBehaviour
@@ -13,7 +11,8 @@ public class No2AddMinus : MonoBehaviour
         Vector3 v2 = new Vector3(2f, 1f, 0f);
         Vector3 v3 = v1 + v2;
 
-        Debug.Log("v1 + v2 =" + (v3.x, v3.y, v3.z));
+        // 벡터의 덧셈
+        Debug.Log("v1 + v2 =" + (v1 + v2));
     }
 
     // Update is called once per frame
