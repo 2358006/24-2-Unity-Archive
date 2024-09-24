@@ -13,6 +13,9 @@ public class No2AddMinus : MonoBehaviour
 
         // 벡터의 덧셈
         Debug.Log("v1 + v2 =" + (v1 + v2));
+
+        // 벡터의 뻴샘
+        Debug.Log("v1 + v2 = " + (v1 - v2));
     }
 
     // Update is called once per frame
