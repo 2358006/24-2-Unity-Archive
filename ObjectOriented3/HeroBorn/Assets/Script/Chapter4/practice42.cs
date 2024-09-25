@@ -12,5 +12,9 @@ public class practice42 : MonoBehaviour
         {
             Debug.Log("You may not enter without the sacred key.");
         }
+        if (weaponType != "LongSword")
+        {
+            Debug.Log("You don't appear to have the right typ weapon...");
+        }
     }
 }
