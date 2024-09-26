@@ -18,10 +18,4 @@ public class Practice413 : MonoBehaviour
             Debug.LogFormat("Item : {0} - {1}g", kvp.Key, kvp.Value);
         }
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }
