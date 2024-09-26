@@ -14,7 +14,7 @@ public class practice42 : MonoBehaviour
         }
         if (weaponType != "LongSword")
         {
-            Debug.Log("You don't appear to have the right typ weapon...");
+            Debug.Log("You don't appear to have the right type weapon...");
         }
     }
 }
