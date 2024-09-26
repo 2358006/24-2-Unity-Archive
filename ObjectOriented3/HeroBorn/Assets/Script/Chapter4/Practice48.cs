@@ -1,5 +1,4 @@
 using System.Collections.Generic;
-using Unity.VisualScripting.ReorderableList.Element_Adder_Menu;
 using UnityEngine;
 
 public class Practice48 : MonoBehaviour
@@ -15,11 +14,5 @@ public class Practice48 : MonoBehaviour
         };
 
         Debug.LogFormat("Party members: {0}", questPartyMembers.Count);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
