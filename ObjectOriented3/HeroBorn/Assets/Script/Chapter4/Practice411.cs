@@ -25,7 +25,7 @@ public void FindPartyMember()
     for (int i = 0; i < listLength; i ++)
     {
         Debug.LogFormat("Index : {0} - {1}", i , questPartyMembers[i]);
-        if(questPartyMembers[i] == "Merin the Wise")
+        if(questPartyMembers[i] == "Merlin the Wise")
         {
             Debug.Log("Glad you're here Merlin!");
         }
