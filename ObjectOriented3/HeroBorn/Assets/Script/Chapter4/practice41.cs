@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class practice41 : MonoBehaviour
+public class Practice41 : MonoBehaviour
 {
     public int currnetGold = 32;
 

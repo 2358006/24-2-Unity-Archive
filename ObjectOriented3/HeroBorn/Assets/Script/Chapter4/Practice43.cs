@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class practice43 : MonoBehaviour
+public class Practice43 : MonoBehaviour
 {
     public bool pureOfHeart = true;
     public bool hasSecretIncantation = false;
