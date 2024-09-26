@@ -1,4 +1,4 @@
-using System.Collections.Generic;
+    using System.Collections.Generic;
 using UnityEngine;
 
 public class Practice410 : MonoBehaviour
@@ -14,11 +14,5 @@ public class Practice410 : MonoBehaviour
         {
             Debug.LogFormat("Index : {0} - {1}", i, questPartyMembers[i]);
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
