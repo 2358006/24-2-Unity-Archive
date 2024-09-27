@@ -318,10 +318,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 963194225}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 31a16616fa16af64db1775fb4872aec7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3a1bd3b39cefce6499a0baab9afc1188, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerLives: 3
+  topPlayerScores: c902000025020000d8030000
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

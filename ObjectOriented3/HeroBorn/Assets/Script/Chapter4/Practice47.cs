@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class Practice47 : MonoBehaviour
 {
+    public int[] topPlayerScores = {713, 549, 984};
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        topPlayerScores[3] = 100;
     }
 }
