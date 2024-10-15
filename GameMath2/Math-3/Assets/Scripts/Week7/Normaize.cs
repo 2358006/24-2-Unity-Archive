@@ -10,14 +10,19 @@ public class Normaize : MonoBehaviour
     ///  1임을 확인 할 수 있다.
     /// </summary>
 
-
     // Start is called before the first frame update
     void Start()
     {
         Vector3 v1 = new Vector3 (2f, 2f, 0f);
+
         // 정규화된 단위 벡터
         Vector3 normalizedVector = v1.normalized;
         Debug.Log("|| v1 || = " + normalizedVector);
+        
+        // 벡터의 길이 확인
+        // Debug.Log("length of ||v1|| = " + v1.magnitude);
+        // 단위벡터의 길이 확인
+        Debug.Log("length of ||v1|| = " + normalizedVector.magnitude);
     }
 
     // Update is called once per frame
