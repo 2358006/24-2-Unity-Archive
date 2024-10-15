@@ -15,6 +15,9 @@ public class Normaize : MonoBehaviour
     void Start()
     {
         Vector3 v1 = new Vector3 (2f, 2f, 0f);
+        // 정규화된 단위 벡터
+        Vector3 normalizedVector = v1.normalized;
+        Debug.Log("|| v1 || = " + normalizedVector);
     }
 
     // Update is called once per frame
