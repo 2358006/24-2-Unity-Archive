@@ -37,12 +37,5 @@ public class VectorDot : MonoBehaviour
         /// vector3의 또다른 함수인 Angle 함수를 사용하면
         /// 두 벡터 사이의 각을 얻을 수 있다. 
         ///</summary>
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }
