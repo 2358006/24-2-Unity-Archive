@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class Distance : MonoBehaviour
@@ -19,12 +17,10 @@ public class Distance : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
-    }
+        Vector3 v1 = new Vector3(2f, 2f, 0f);
+        Vector3 v2 = new Vector3(5f, 7f, 0f);
 
-    // Update is called once per frame
-    void Update()
-    {
-        
+        // 두 벡터 v1, v2 사이의 거리
+        Debug.Log("Distance of v1, v2 = " + Vector3.Distance(v1, v2));
     }
 }
