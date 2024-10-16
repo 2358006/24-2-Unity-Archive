@@ -1,7 +1,7 @@
 using System.Data;
 using UnityEngine;
 
-public class LearningCurve : MonoBehaviour
+public class practice3 : MonoBehaviour
 {
     public int currentAge = 30;
     public int addAge = 1;
