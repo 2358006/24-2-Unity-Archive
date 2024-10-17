@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class LearningCurve : MonoBehaviour
+public class LearningCurve513
 {
     public Transform camTransform;
 
