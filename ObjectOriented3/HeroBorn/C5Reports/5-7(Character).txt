@@ -6,7 +6,7 @@ public class Character
 
     public Character()
     {
-        Reset();
+        name = "Not assigned";
     }
     public Character(string name)
     {
@@ -15,17 +15,5 @@ public class Character
     public void PrintStatsInfo()
     {
         Debug.LogFormat("Hero : {0} - {1} EXP", this.name, this.exp);
-    }
-    private void Reset()
-    {
-        this.name = "Not assigned";
-        this.exp = 0;
-    }
-}
-public class Paladin : Character
-{
-    public Paladin(string name) : base(name)
-    {
-
     }
 }

@@ -1,14 +1,14 @@
 using UnityEngine;
-public class Character
+public class Character510
 {
     public string name;
     public int exp = 0; 
 
-    public Character()
+    public Character510()
     {
         Reset();
     }
-    public Character(string name)
+    public Character510(string name)
     {
         this.name = name;
     }
@@ -22,9 +22,9 @@ public class Character
         this.exp = 0;
     }
 }
-public class Paladin : Character
+public class Paladin510 : Character510
 {
-    public Paladin(string name) : base(name)
+    public Paladin510(string name) : base(name)
     {
 
     }
