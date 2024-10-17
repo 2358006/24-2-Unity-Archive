@@ -1,10 +1,10 @@
 using UnityEngine;
-public struct Weapon
+public struct Weapon506
 {
     public string name;
     public int damage;
 
-    public Weapon(string name, int damage)
+    public Weapon506(string name, int damage)
     {
         this.name = name;
         this.damage = damage;

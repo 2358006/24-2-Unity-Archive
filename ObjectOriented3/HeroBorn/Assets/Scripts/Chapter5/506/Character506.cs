@@ -1,14 +1,14 @@
 using UnityEngine;
-public class Character
+public class Character506
 {
     public string name;
     public int exp = 0; 
 
-    public Character()
+    public Character506()
     {
         name = "Not assigned";
     }
-    public Character(string name)
+    public Character506(string name)
     {
         this.name = name;
     }
