@@ -1,44 +1,52 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class VectorDot : MonoBehaviour
 {
     /// <summary>
-    ///  6. Vectorì˜ ë‚´ì 
-    ///  ë²¡í„°ì˜ ë‚´ì ì„ êµ¬í•˜ë ¤ë©´ Vector3 í´ë˜ìŠ¤
+    /// 6. º¤ÅÍÀÇ ³»Àû
+    /// º¤ÅÍÀÇ ³»ÀûÀ» ±¸ÇÏ·Á¸é Vector3 Å¬·¡½ºÀÇ Á¤Àû ÇÔ¼öÀÎ
+    /// Dot ÇÔ¼ö¸¦ »ç¿ëÇÏ¸é µË´Ï´Ù.
     /// </summary>
 
 
     // Start is called before the first frame update
     void Start()
     {
-    Vector3 v1 = new Vector3(2f, 0f, 0f);
-    Vector3 v45 = new Vector3(1f, 1f, 0f);
-    Vector3 v90 = new Vector3(0f, 90f, 0f);
-    Vector3 v135 = new Vector3(-1f, 1f, 0f);
-        
-        // ë²¡í„°ì˜ ë‚´ì 
-        Debug.Log("v1 v45 = " + Vector3.Dot(v1, v45));
-        Debug.Log("v1 v90 = " + Vector3.Dot(v1, v90));
-        Debug.Log("v1 v135 = " + Vector3.Dot(v1, v135));
+        Vector3 v1 = new Vector3(2f, 0f, 0f);
+        Vector3 v45 = new Vector3(1f, 1f, 0);
+        Vector3 v90 = new Vector3(0, 90, 0);
+        Vector3 v135 = new Vector3(-1f, 1f, 0f);
 
-        // ë‘ ë²¡í„° ì‚¬ì´ì˜ ê°ë„
-        Debug.Log("Angle Degree of v1, v45 = " + Vector3.Angle(v1, v45));
-        Debug.Log("Angle Degree of v1, v90 = " + Vector3.Angle(v1, v90));
-        Debug.Log("Angle Degree of v1, v135 = " + Vector3.Angle(v1, v135));
+        // º¤ÅÍÀÇ ³»Àû
+        Debug.Log("V1, V45 = " + Vector3.Dot(v1, v45));
+        Debug.Log("V1, V90 = " + Vector3.Dot(v1, v90));
+        Debug.Log("V1, V135 = " + Vector3.Dot(v1, v135));
 
-        ///<summary>
-        /// ë²¡í„°ì˜ ë‚´ì ì— ëŒ€í•´ì„œ ì„¤ëª…í–ˆë“¯,
-        /// v1ê³¼ v45 ì‚¬ì´ì— ê°ë„ëŠ” 90ë„ ë³´ë‹¤ ì‘ê¸° ë•Œë¬¸ì—
-        /// 0ë³´ë‹¤ í° ê°’ì´ ë‚˜ì™”ê³ ,
-        /// v1ê³¼ v90 ì‚¬ì´ ê°ì€ ì •í™•íˆ 90ë„ì´ê¸° ë•Œë¬¸ì— 0
-        /// v1ê³¼ v135 ì‚¬ì´ì˜ ê°ì€ 90ë„ ë³´ë‹¤ ì»¤ì„œ 
-        /// 0ë³´ë‹¤ ì‘ì€ ê°’ì´ ë‚˜ì˜¨ ê²ƒì„ í™•ì¸ í•  ìˆ˜ ìˆë‹¤.
-        ///
-        /// vector3ì˜ ë˜ë‹¤ë¥¸ í•¨ìˆ˜ì¸ Angle í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ë©´
-        /// ë‘ ë²¡í„° ì‚¬ì´ì˜ ê°ì„ ì–»ì„ ìˆ˜ ìˆë‹¤. 
+        // µÎ º¤ÅÍ »çÀÌÀÇ °¢µµ
+        Debug.Log("Angle of V1, V45 = " + Vector3.Angle(v1, v45));
+        Debug.Log("Angle of V1, V90 = " + Vector3.Angle(v1, v90));
+        Debug.Log("Angle of V1, V135 = " + Vector3.Angle(v1, v135));
+
+        /// <summary>
+        /// º¤ÅÍÀÇ ³»Àû¿¡ ´ëÇØ¼­ ¼³¸íÇßµíÀÌ,
+        /// v1°ú v45 »çÀÌÀÇ °¢µµ´Â 90µµ º¸´Ù ÀÛ±â ¶§¹®¿¡
+        /// 0º¸´Ù Å« °ªÀÌ ³ª¿Ô°í,
+        /// v1°ú v90 »çÀÌ °¢Àº Á¤È®È÷ 90µµÀÌ±â ¶§¹®¿¡ 0
+        /// v1°ú v135»çÀÌÀÇ °¢Àº 90µµº¸´Ù Ä¿¼­
+        /// 0º¸´Ù´Â ÀÛÀº °ªÀÌ ³ª¿Â °ÍÀ» È®ÀÎÇÒ ¼ö ÀÖ´Ù.
         /// 
-        /// Vector3ì˜ ë˜ë‹¤ë¥¸ í•¨ìˆ˜ì¸ Angle í•¨ìˆ˜ë¥¼ ì‚¬ìš©í•˜ë©´
-        /// ë‘ ë²¡í„° ì‚¬ì´ì˜ ê°ì„ ì–»ì„ ìˆ˜ ìˆë‹¤. 
-        ///</summary>
+        /// Vector3ÀÇ ¶Ç ´Ù¸¥ ÇÔ¼öÀÎ AngleÇÔ¼ö¸¦ »ç¿ëÇÏ¸é
+        /// µÎ º¤ÅÍ »çÀÌÀÇ °¢À» ¾òÀ» ¼ö ÀÖ´Ù.
+        /// 
+        /// </summary>
+
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }

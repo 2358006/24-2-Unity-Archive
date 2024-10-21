@@ -1,55 +1,100 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class VectorFunction : MonoBehaviour
 {
     /*
-    1. Vctor3.back
-    Vector3(0, 0, -1);ì„ ì˜ë¯¸
+     1. Vector3.back
+        Vector3(0, 0, -1); À» ÀÇ¹Ì
+     
+     2. Vector3.down
+        Vector3(0, -1, 0); À» ÀÇ¹Ì
 
-    2. Vector3.down
-    Vector3(0, -1, 0);ì„ ì˜ë¯¸
+     3. Vector3.forward
+        Vector3(0, 0, 1);À» ÀÇ¹Ì
 
-    3. Vector3.forward
-    Vector3(0, 0, 1);ì„ ì˜ë¯¸
+     4. Vector3.left
+        Vector3(-1, 0, 0);À» ÀÇ¹Ì
 
-    4. Vector3.left
-    Vector3(-1, 0,  0);ì„ ì˜ë¯¸
+     5. Vector3.negativeInfinity
+        À½¼ö ¹«ÇÑ´ë
 
-    5. Vector3.negativeInfinity
-    ìŒìˆ˜ ë¬´í•œëŒ€
+     6. Vector3.positiveInfinity
+        ¾ç¼ö ¹«ÇÑ´ë
 
-    6.  Vector3.positiveInfinity
-    ì–‘ìˆ˜ ë¬´í•œëŒ€
+     7. Vector3.one
+        Vector3(1, 1, 1);À» ÀÇ¹Ì
 
-    7. Vector3.one
-    Vector3(1, 1, 1); ì˜ë¯¸
-
-    8. Vector3.right
-    Vector3(1, 0,  0);ì„ ì˜ë¯¸
-
-    9. Vector3.UP
-    Vector3(0, 1, 0);ì„ ì˜ë¯¸
+     8. Vector3.riht
+        Vector3(1, 0, 0);À» ÀÇ¹Ì
+     
+     9. Vector3.up
+        Vector3(0, 1, 0);À» ÀÇ¹Ì
     
     10. Vector3.zero
-    Vector3(0, 0, 0) ì˜ë¯¸
+        Vector3(0, 0, 0);À» ÀÇ¹Ì
 
-    11. Vector3.Magnitude
-    ì½ê¸° ì „ìš© ê¸¸ì´ ë°˜í™˜ float
+    11. Vector3.magnitude
+        ÀĞ±â Àü¿ë ±æÀÌ¸¦ ¹İÈ¯ÇÕ´Ï´Ù. float
 
-    12. 
-    */
+    12. Vector3.normalized()
+        Á¤±ÔÈ­½ÃÅ²´Ù. Å©±â°¡ 1ÀÎ º¤ÅÍ¸¦ ¹İÈ¯
+
+    13. Vector3.sqrMagnitude
+        º¤ÅÍÀÇ ±æÀÌ Á¦°ö ¹İÈ¯
+
+    14. Vector3.Angle
+        µÎ º¤ÅÍ »çÀÌÀÇ °¢µµ¸¦ ¹İÈ¯ÇÕ´Ï´Ù.
+
+    15. Vector3.Distance(x,y)
+        µÎ º¤ÅÍ »çÀÌÀÇ ±æÀÌ¸¦ ¹İÈ¯
+        
+    16. Vector3.Dot(v1, v2)
+         µÎ º¤ÅÍÀÇ ³»ÀûÀ» ¹İÈ¯
+
+    17. Vector3.Max(v1, v2)
+        µÎ º¤ÅÍ Áß °¡Àå Å« ¼ö¸¦ ¸ğ¾Æ¼­ ÇÏ³ªÀÇ º¤ÅÍ·Î ¸¸µì´Ï´Ù.
+        
+    ex)
+
+    Vector a = new Vector3(1,2,3);
+    Vector b = new Vector3(4,3,2);
+
+    Debug.Log("Max of a and b : " + Vector3.Max(a,b));
+
+    18. Vector3.Min(v1, v2);
+        µÎ º¤ÅÍ Áß °¡Àå ÀÛÀº ¼ö¸¦ ¸ğ¾Æ¼­ ÇÏ³ªÀÇ º¤ÅÍ·Î ¸¸µì´Ï´Ù.
+
+    ex)
+
+    Vector a = new Vector3(1,2,3);
+    Vector b = new Vector3(4,3,2);
+
+    Debug.Log("Max of a and b : " + Vector3.Min(a,b));
+
+
+    19. Vector3.Normalize
+        Á¤±ÔÈ­½ÃÅµ´Ï´Ù. 
+        º¤ÅÍÀÇ Å©±â¸¦ 1·Î ¸¸µì´Ï´Ù.
+        Á¤±ÔÈ­µÇ¸é º¤ÅÍ´Â °°Àº ¹æÇâÀ» À¯ÁöÇÏÁö¸¸ ±æÀÌ´Â 1.0ÀÔ´Ï´Ù.
+     */
+
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         Debug.Log(Vector3.back);
         Debug.Log(Vector3.positiveInfinity);
         Debug.Log(Vector3.zero);
+        Debug.Log(Vector3.Magnitude(Vector3.back));
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-        
+
     }
 }
