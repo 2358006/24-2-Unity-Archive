@@ -1,27 +1,21 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.Scripting;
 
 public class Distance2 : MonoBehaviour
 {
     public Transform player;
     public float attackRange = 5.0f;
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        Vector3 v1 = new Vector3(2f, 2f, 0f);
-        Vector3 v2 = new Vector3(5f, 7f, 0f);
-
-        // Îëê Î≤°ÌÑ∞ v1, v2 ÏÇ¨Ïù¥Ïùò Í±∞Î¶¨
-        Debug.Log("Distance of v1, v2 = " + Vector3.Distance(v1, v2));
-    }
+    // Update is called once per frame
     void Update()
     {
         float distanceToPlayer = Vector3.Distance(transform.position, player.position);
+
         if (distanceToPlayer < attackRange)
         {
-            Debug.Log("ÌîåÎ†àÏù¥Ïñ¥Í∞Ä Í≥µÍ≤©Î≤îÏúÑ ÎÇ¥Ïóê ÏûàÎã§. Í≥µÍ≤© ÏãúÏûëÌï® „ÖÖ„Ñ±");
-            // Ïó¨Í∏∞Ïóê Í≥µÍ≤© „Ñ±„Ñ±
+            Debug.Log("«√∑π¿ÃæÓ∞° ∞¯∞› π¸¿ß ≥ªø° ¿÷Ω¿¥œ¥Ÿ. ∞¯∞›¿ª Ω√¿€«’¥œ¥Ÿ.");
+            // ø©±‚ø° ∞¯∞› ∑Œ¡˜¿ª √ﬂ∞°
         }
     }
 }

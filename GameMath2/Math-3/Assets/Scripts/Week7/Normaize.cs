@@ -1,33 +1,36 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Normaize : MonoBehaviour
 {
     /// <summary>
-    ///  5. ë²¡í„°ì˜ ì •ê·œí™”
-    ///  Vector3 êµ¬ì¡°ì²´ì˜ normalized í”„ë¡œí¼í‹°ë¥¼ ì´ìš©í•˜ë©´
-    ///  ì •ê·œí™”ëœ ë‹¨ìœ„ë²¡í„°ë¥¼ ê°€ì ¸ì˜¬ ìˆ˜ ìˆë‹¤.
-    ///  magnitude í”„ë¡œí¼í‹°ë¥¼ ì‚¬ìš©í•˜ë©´ ë‹¨ìœ„ë²¡í„°ì˜ ê¸¸ì´ê°€
-    ///  1ì„ì„ í™•ì¸ í•  ìˆ˜ ìˆë‹¤.
+    /// 5. º¤ÅÍÀÇ Á¤±ÔÈ­
+    /// Vector3 ±¸Á¶Ã¼ÀÇ normalized ÇÁ·ÎÆÛÆ¼¸¦ ÀÌ¿ëÇÏ¸é
+    /// Á¤±ÔÈ­µÈ ´ÜÀ§º¤ÅÍ¸¦ °¡Á®¿Ã ¼ö ÀÖ½À´Ï´Ù.
+    /// magnitude ÇÁ·ÎÆÛÆ¼¸¦ »ç¿ëÇÏ¸é ´ÜÀ§ º¤ÅÍÀÇ ±æÀÌ°¡
+    /// 1ÀÓÀ» È®ÀÎ ÇÒ ¼ö ÀÖ½À´Ï´Ù.
     /// </summary>
 
     // Start is called before the first frame update
     void Start()
     {
-        Vector3 v1 = new Vector3 (2f, 2f, 0f);
+        Vector3 v1 = new Vector3(2f, 2f, 0f);
 
-        // ì •ê·œí™”ëœ ë‹¨ìœ„ ë²¡í„°
-        Vector3 normalizedVector = v1.normalized;
-        Debug.Log("|| v1 || = " + normalizedVector);
-        
-        // ë²¡í„°ì˜ ê¸¸ì´ í™•ì¸
-        // Debug.Log("length of ||v1|| = " + v1.magnitude);
-        // ë‹¨ìœ„ë²¡í„°ì˜ ê¸¸ì´ í™•ì¸
-        Debug.Log("length of ||v1|| = " + normalizedVector.magnitude);
+        // Á¤±ÔÈ­µÈ ´ÜÀ§ º¤ÅÍ
+        Vector3 nomalizedVector = v1.normalized;
+        Debug.Log("||v1|| = " + nomalizedVector);
+
+        // v1ÀÇ ±æÀÌ
+        Debug.Log("length of v1 = " + v1.magnitude);
+
+        // ´ÜÀ§ º¤ÅÍÀÇ ±æÀÌ È®ÀÎ
+        Debug.Log("length of ||v1|| = " + nomalizedVector.magnitude);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+
     }
 }

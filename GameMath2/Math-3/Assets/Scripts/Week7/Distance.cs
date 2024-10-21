@@ -1,26 +1,37 @@
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Distance : MonoBehaviour
 {
     /// <summary>
-    /// Vector3 Distance í•¨ìˆ˜
-    /// - ë‘ ì  ì‚¬ì´ì˜ ê±°ë¦¬ë¥¼ ê³„ì‚°í•˜ëŠ”ë° ì‚¬ìš©ë˜ëŠ” í•¨ìˆ˜
-    /// - Vector3 íƒ€ì…ì˜ ë‘ì ì„ ì…ë ¥ ë°›ê³  ë‘ì  ì‚¬ì´ì˜ ì§ì„  
-    /// ê±°ë¦¬ë¥¼ float í˜•íƒœë¡œ ë°˜í™˜
-    /// - ì´ í•¨ìˆ˜ì˜ ê³„ì‚° ë°©ì‹ì€ ìœ í´ë¦¬ë“œ ê±°ë¦¬ ê³µì‹ì„ ê¸°ë°˜
+    /// Vector3.Distance ÇÔ¼ö
+    /// - µÎ Á¡ »çÀÌÀÇ °Å¸®¸¦ °è»êÇÏ´Â µ¥ »ç¿ëµÇ´Â ÇÔ¼ö
+    /// - Vector3 Å¸ÀÔÀÇ µÎ Á¡À» ÀÔ·ÂÀ¸·Î ¹Ş°í µÎ Á¡ »çÀÌÀÇ Á÷¼±
+    /// °Å¸®¸¦ float ÇüÅÂ·Î ¹İÈ¯
+    /// - ÀÌ ÇÔ¼öÀÇ °è»ê ¹æ½ÄÀº À¯Å¬¸®µå °Å¸® °ø½ÄÀ» ±â¹İ
     /// 
-    /// ì‚¬ìš©ëª©ì 
-    /// Vector3.Distance í•¨ìˆ˜ëŠ” ê²Œì„ ê°œë°œì—ì„œ ë§¤ìš° ì¤‘ìš”í•œ ì—­í• ì„ í•œë‹¤.
-    /// íŠ¹íˆ ë‘ ê°ì²´ê°„ ê±°ë¦¬ë¥¼ íŒë‹¨í•´ íŠ¹ì • ì´ë²¤íŠ¸ë¥¼ íŠ¸ë¦¬ê±° í•˜ëŠ”ë° ì‚¬ìš©ëœë‹¤. 
+    /// »ç¿ë¸ñÀû
+    /// Vector3.Distance ÇÔ¼ö´Â °ÔÀÓ °³¹ß¿¡¼­ ¸Å¿ì Áß¿äÇÑ ¿ªÇÒÀ»
+    /// ÇÑ´Ù.
+    /// Æ¯È÷, µÎ °´Ã¼ °£ÀÇ °Å¸®¸¦ ÆÇ´ÜÇÏ¿© Æ¯Á¤ ÀÌº¥Æ®¸¦ 
+    /// Æ®¸®°ÅÇÏ´Âµ¥ »ç¿ëµÈ´Ù.
+    /// 
     /// </summary>
-    
+
     // Start is called before the first frame update
     void Start()
     {
         Vector3 v1 = new Vector3(2f, 2f, 0f);
         Vector3 v2 = new Vector3(5f, 7f, 0f);
 
-        // ë‘ ë²¡í„° v1, v2 ì‚¬ì´ì˜ ê±°ë¦¬
-        Debug.Log("Distance of v1, v2 = " + Vector3.Distance(v1, v2));
+        // µÎ º¤ÅÍ v1, v2 »çÀÌÀÇ °Å¸®
+        Debug.Log("Distance of V1, V2 = " + Vector3.Distance(v1, v2));
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+
     }
 }
