@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class LearningCurve513
+public class LearningCurve513 : MonoBehaviour
 {
-    public Transform camTransform;
+    Transform camTransform513;
 
     // Start is called before the first frame update
     void Start()
     {
-        camTransform = this.GetComponent<Transform>();
-        Debug.Log(camTransform.localPosition);
+        camTransform513 = this.GetComponent<Transform>();
+        Debug.Log(camTransform513.localPosition);   
     }
 }

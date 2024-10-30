@@ -11,12 +11,12 @@ public class Character515
     {
         this.name = name;
     }
-    public virtual void PrintStatsInfo()
+    public virtual void PrintStatsInfo() 
     {
         Debug.LogFormat("Hero : {0} - {1} EXP", this.name, this.exp);
     }
 }
-public class Paladin : Character515
+public class Paladin515 : Character515
 {
     public Weapon515 weapon;
     public Paladin515(string name, Weapon515 weapon) : base(name)
