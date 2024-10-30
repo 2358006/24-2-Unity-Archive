@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Practice412 : MonoBehaviour
+public class LearningCurve412 : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()

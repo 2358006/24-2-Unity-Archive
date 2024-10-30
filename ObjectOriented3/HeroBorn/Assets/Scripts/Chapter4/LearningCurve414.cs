@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Practice414 : MonoBehaviour
+public class LearningCurve414 : MonoBehaviour
 {
     public int playerLives = 3;
 

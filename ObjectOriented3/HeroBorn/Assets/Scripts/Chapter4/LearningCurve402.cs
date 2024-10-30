@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Practice42 : MonoBehaviour
+public class Practice402 : MonoBehaviour
 {
     public bool hasDungeonKey = false;
     public string weaponType = "Arcane Staff";

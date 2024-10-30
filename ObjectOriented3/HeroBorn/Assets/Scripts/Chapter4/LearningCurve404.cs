@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Practice44 : MonoBehaviour
+public class Practice404 : MonoBehaviour
 {
     public string charcterAction = "Attack";
     // Start is called before the first frame update

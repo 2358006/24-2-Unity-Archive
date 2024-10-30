@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Practice45 : MonoBehaviour
+public class LearningCurve405 : MonoBehaviour
 {
     public int diceRoll = 7;
 

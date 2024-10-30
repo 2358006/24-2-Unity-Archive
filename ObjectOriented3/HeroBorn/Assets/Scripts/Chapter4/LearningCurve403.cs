@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Practice43 : MonoBehaviour
+public class LearningCurve403 : MonoBehaviour
 {
     public bool pureOfHeart = true;
     public bool hasSecretIncantation = false;
