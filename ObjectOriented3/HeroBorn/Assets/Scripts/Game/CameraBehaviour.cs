@@ -9,9 +9,7 @@ public class CameraBehaviour : MonoBehaviour
 
     // 2
     private Transform _target;
-
-    // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
         // 3
         _target = GameObject.Find("Player").transform;
@@ -25,11 +23,5 @@ public class CameraBehaviour : MonoBehaviour
 
         // 6
         this.transform.LookAt(_target);
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

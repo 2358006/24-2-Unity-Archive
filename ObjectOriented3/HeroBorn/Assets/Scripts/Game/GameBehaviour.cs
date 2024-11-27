@@ -4,21 +4,31 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using Unity.VisualScripting;
 public class GameBehaviour : MonoBehaviour
 {
     public int maxItems = 4;
+
     public TMP_Text healthText;
     public TMP_Text itemText;
     public TMP_Text progressText;
-    public Button winButton;
-    private int _itemsCollected = 0;
-    private int _playerHp = 10;
-    void Start()
+
+    void Awake()
     {
         itemText.text += _itemsCollected;
         healthText.text += _playerHp;
     }
 
+    public Button winButton;
+    public Button lossButton;
+
+    public void UpdateScene(string updatedText)
+    {
+        progressText.text = "updated Text";
+        Time.timeScale = 0f;
+    }
+
+    private int _itemsCollected = 0;
     public int Items
     {
         get { return _itemsCollected; }
@@ -29,7 +39,7 @@ public class GameBehaviour : MonoBehaviour
 
             if(_itemsCollected >= maxItems)
             {
-                progressText.text = "You've found all the items!";
+                UpdateScene("You've found all the items!");
                 winButton.gameObject.SetActive(true);
                 Time.timeScale = 0f;
             }
@@ -39,6 +49,7 @@ public class GameBehaviour : MonoBehaviour
             }
         }
     }
+    private int _playerHp = 10;
     public int HP
     {
         get {return _playerHp; }
@@ -46,6 +57,16 @@ public class GameBehaviour : MonoBehaviour
         {
             _playerHp = value;
             healthText.text = "Health : " + HP;
+
+            if(_playerHp <= 0)
+            {
+                UpdateScene("You want anther life with that?");
+                lossButton.gameObject.SetActive(true);
+            }
+            else
+            {
+                progressText.text = "Ouch... that's got hunt.";
+            }
             Debug.LogFormat ("Items : {0}", _playerHp);
         }
     }

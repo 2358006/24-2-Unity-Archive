@@ -4,7 +4,7 @@ using UnityEngine;
 public class ItemBehaviour : MonoBehaviour
 {
     public GameBehaviour gameManager;
-    void Start()
+    void Awake()
     {
         gameManager = GameObject.Find("GameManager").GetComponent<GameBehaviour>();
     }
