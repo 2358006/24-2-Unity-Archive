@@ -1,25 +1,24 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 public class GameBehaviour : MonoBehaviour
 {
-    public int maxItems = 4;
-    public int maxEnemys = 4;
+    // Hp와 적 숫자를 인스펙터에서 조정 가능하게 함
+    public int maxEnemy = 4;
+    public int startHp = 3;
 
     public TMP_Text healthText;
-    public TMP_Text itemText;
     public TMP_Text enemyText;
     public TMP_Text progressText;
 
     void Awake()
     {
-        itemText.text += _itemsCollected;
+        // 인스펙터에서 조정
+        _enemysKilled = maxEnemy;
+        _playerHp = startHp;
+
+        enemyText.text += _enemysKilled;
         healthText.text += _playerHp;
-        enemyText.text += _enemyCount;
-        progressText.text = "Lego Lego";
     }
 
     public Button winButton;
@@ -27,31 +26,21 @@ public class GameBehaviour : MonoBehaviour
 
     public void UpdateScene(string updatedText)
     {
-        progressText.text = updatedText;
+        progressText.text = "updated Text";
         Time.timeScale = 0f;
     }
 
-    private int _itemsCollected = 0;
-    public int Items
-    {
-        get { return _itemsCollected; }
-        set
-        {
-            _itemsCollected = value;
-            itemText.text = "Items : " + Items;
-        }
-    }
-
-    private int _enemyCount = 0;
+    // 적을 다 죽이는것으로 게임 목표 변경
+    private int _enemysKilled = 0;
     public int Enemys
     {
-        get { return _enemyCount; }
+        get { return _enemysKilled; }
         set
         {
-            _enemyCount = value;
-            enemyText.text = "Enemy : " + Enemys;
+            _enemysKilled = value;
+            enemyText.text = "Enemys : " + Enemys;
 
-            if (_enemyCount >= maxEnemys)
+            if (_enemysKilled == 0)
             {
                 UpdateScene("You've kill all enemys");
                 winButton.gameObject.SetActive(true);
@@ -59,14 +48,11 @@ public class GameBehaviour : MonoBehaviour
             }
             else
             {
-                progressText.text = "U can kill " + (maxEnemys - _enemyCount) + " enemys.";
+                progressText.text = "Enemy kill only " + _enemysKilled + " more to go";
             }
         }
     }
-
-
-
-    private int _playerHp = 10;
+    private int _playerHp = 0;
     public int HP
     {
         get { return _playerHp; }
@@ -82,14 +68,10 @@ public class GameBehaviour : MonoBehaviour
             }
             else
             {
-                progressText.text = "Ouch... that's got hunt.";
+                progressText.text = "You Changed your Hp.";
             }
             Debug.LogFormat("Items : {0}", _playerHp);
         }
     }
-    public void RestartScene()
-    {
-        SceneManager.LoadScene(0);
-        Time.timeScale = 1f;
-    }
+
 }
